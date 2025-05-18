@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>New Thread - Threads Clone</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="responsive.css" />
+</head>
+<body>
+  <div class="top-label">
+    <span class="label-text">New thread</span>
+  </div>
+      
+  <div class="main-layout">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="logo"><img src="hd-threads-social-media-instagram-app-logo-icon-png-735811696672319uz2jyflkui-removebg-preview.png" alt=""></div>
+      <nav class="nav-icons">
+        <a href="index.html" title="Home"><i class="fa-solid fa-house"></i></a>
+        <a href="SearchPage.html" title="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="upload.html" title="Upload" class="upload-btn active"><i class="fa-solid fa-plus"></i></a>
+        <a href="notifications.html" title="Notifications"><i class="fa-solid fa-heart"></i></a>
+        <a href="profile.html" title="Profile"><i class="fa-solid fa-user"></i></a>
+      </nav>
+      <div class="menu"><a href="settings.html" title="Menu"><i class="fa-solid fa-bars"></i></a></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="app-container">
+      <div class="mamah">
+        <div class="thread-page">
+          <div class="thread-composer">
+            <div class="composer-user">
+              <img src="WIN_20231115_03_22_32_Pro.jpg" alt="user" class="avatar" />
+              <span class="username">cyndiiieeee</span>
+              <span class="add-topic">Add a topic</span>
+            </div>
+            
+            <div class="composer-input">
+              <textarea placeholder="What's new?" class="post-input"></textarea>
+              <div class="composer-actions">
+                <button class="action-btn"><i class="fa-regular fa-image"></i></button>
+                <button class="action-btn"><i class="fa-regular fa-face-smile"></i></button>
+                <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                <button class="action-btn"><i class="fa-solid fa-bars"></i></button>
+              </div>
+            </div>
+
+            <div class="thread-options">
+              <div class="reply-settings">
+                <i class="fa-solid fa-user-group"></i>
+                Anyone can reply & quote
+              </div>
+              <button class="post-btn" disabled>Post</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Template -->
+  <div class="modal-overlay" id="uploadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="cancel-btn">Cancel</button>
+        <span class="modal-title">New thread</span>
+        <div class="modal-actions">
+          <button class="draft-icon"><i class="fa-regular fa-note-sticky"></i></button>
+          <button class="preview-icon"><i class="fa-regular fa-eye"></i></button>
+        </div>
+      </div>
+      
+      <div class="modal-body">
+        <div class="thread-composer">
+          <div class="composer-main">
+            <div class="composer-user">
+              <img src="WIN_20231115_03_22_32_Pro.jpg" alt="user" class="avatar" />
+              <div class="user-info">
+                <span class="username">cyndiiieeee</span>
+                <span class="add-topic">Add a topic</span>
+              </div>
+            </div>
+            
+            <div class="composer-content">
+              <div class="vertical-line"></div>
+              <div class="content-area">
+                <textarea placeholder="What's new?" class="post-input"></textarea>
+                <div class="composer-actions">
+                  <button class="action-btn"><i class="fa-regular fa-image"></i></button>
+                  <button class="action-btn"><i class="fa-regular fa-comment"></i></button>
+                  <button class="action-btn"><i class="fa-regular fa-face-smile"></i></button>
+                  <button class="action-btn"><i class="fa-solid fa-equals"></i></button>
+                  <button class="action-btn"><i class="fa-solid fa-location-dot"></i></button>
+                </div>
+              </div>
+            </div>
+
+            <div class="add-to-thread">
+              <img src="WIN_20231115_03_22_32_Pro.jpg" alt="user" class="avatar small" />
+              <span class="add-thread-text">Add to thread</span>
+            </div>
+          </div>
+
+          <div class="thread-footer">
+            <div class="reply-settings">
+              <span>Anyone can reply & quote</span>
+            </div>
+            <button class="post-btn" disabled>Post</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const textarea = document.querySelector('.post-input');
+    const postBtn = document.querySelector('.post-btn');
+
+    textarea.addEventListener('input', function() {
+      postBtn.disabled = !this.value.trim();
+    });
+
+    document.querySelector('.cancel-btn').addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+
+    postBtn.addEventListener('click', function() {
+      window.location.href = 'index.html';
+    });
+  </script>
+</body>
+</html>

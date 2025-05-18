@@ -1,0 +1,274 @@
+/* Large devices (laptops/desktops, up to 1200px) */
+@media screen and (max-width: 1200px) {
+  .app-container {
+    max-width: 800px;
+  }
+
+  .top-label {
+    max-width: 800px;
+  }
+}
+
+/* Medium devices (tablets, up to 992px) */
+@media screen and (max-width: 992px) {
+  .app-container {
+    max-width: 90%;
+  }
+
+  .top-label {
+    max-width: 90%;
+  }
+
+  /* Settings page */
+  .settings-container {
+    flex-direction: column;
+  }
+
+  .settings-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(78, 76, 76, 0.76);
+    padding: 10px 0;
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .settings-sidebar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .settings-nav-item {
+    padding: 10px 15px;
+    white-space: nowrap;
+  }
+
+  /* Profile page */
+  .profile-main {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .profile-picture {
+    margin: 0;
+  }
+
+  .profile-actions {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+}
+
+/* Small devices (landscape phones, up to 768px) */
+@media screen and (max-width: 768px) {
+  .main-layout {
+    margin-left: 0;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    top: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+    padding: 10px;
+    background-color: #000;
+    border-top: 1px solid rgba(78, 76, 76, 0.76);
+    z-index: 1000;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .nav-icons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .app-container {
+    margin-left: 0;
+    margin-bottom: 70px;
+    border-radius: 0;
+  }
+
+  /* Search page */
+  .notification-filters {
+    padding: 10px;
+  }
+
+  .filter-btn {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  /* Upload modal */
+  .modal-content {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    margin: 0;
+  }
+
+  /* Notifications page */
+  .notification-item {
+    padding: 10px;
+  }
+
+  .interaction-stats {
+    flex-wrap: wrap;
+  }
+
+  /* Settings page */
+  .settings-content {
+    padding: 15px;
+  }
+
+  .setting-item {
+    padding: 12px 0;
+  }
+
+  .activity-dropdown {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .filter-select {
+    max-width: 120px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Extra small devices (phones, up to 576px) */
+@media screen and (max-width: 576px) {
+  .top-label {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Profile page */
+  .profile-header {
+    padding: 15px;
+  }
+
+  .profile-name-handle h1 {
+    font-size: 1.2rem;
+  }
+
+  .profile-tabs {
+    padding: 0 10px;
+  }
+
+  .tab-btn {
+    padding: 12px 8px;
+    font-size: 0.8rem;
+  }
+
+  .setup-task {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  /* Search page */
+  .search-box {
+    padding: 8px 12px;
+  }
+
+  .search-box input {
+    font-size: 0.9rem;
+  }
+
+  /* Upload modal */
+  .post-input {
+    min-height: 100px;
+    font-size: 0.9rem;
+  }
+
+  .upload-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Notifications page */
+  .notification-text {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timestamp {
+    margin-top: 5px;
+  }
+
+  /* Settings page */
+  .settings-nav-item {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  .setting-left {
+    gap: 10px;
+  }
+}
+
+/* Height-based media queries for better mobile experience */
+@media screen and (max-height: 700px) {
+  .profile-picture {
+    width: 60px;
+    height: 60px;
+  }
+
+  .setup-task {
+    padding: 12px;
+  }
+
+  .task-icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* Dark theme adjustments for better contrast on mobile */
+@media (max-width: 768px) and (prefers-color-scheme: dark) {
+  .sidebar {
+    background-color: #000;
+  }
+
+  .app-container {
+    background-color: #1a1a1a;
+  }
+
+  .modal-content {
+    background-color: #1a1a1a;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media screen and (max-width: 992px) and (orientation: landscape) {
+  .sidebar {
+    display: none;
+  }
+
+  .app-container {
+    margin-bottom: 0;
+  }
+
+  .modal-content {
+    max-height: 90vh;
+    margin: auto;
+  }
+} 
